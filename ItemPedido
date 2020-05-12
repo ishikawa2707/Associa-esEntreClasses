@@ -1,0 +1,26 @@
+package aula20200511.associações;
+
+public class ItemPedido {
+	private double quantidade;
+	private double preco;
+	private Produto produto;
+
+	public ItemPedido(Produto produto, double quantidade, double preco) {
+		this.produto = produto;
+		this.quantidade = quantidade;
+		this.preco = preco;
+	}
+
+	public double getQuantidade() {
+		return this.quantidade;
+	}
+
+	public double getPreco() {
+		return this.preco;
+	}
+
+	public Produto getProduto() {
+		return this.produto;
+	}
+
+}

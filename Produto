@@ -1,0 +1,14 @@
+package aula20200511.associações;
+
+public class Produto {
+	private String nome;
+
+	public String getNome() {
+		return nome;
+	}
+
+	public Produto(String nome) {
+		super();
+		this.nome = nome;
+	}
+}

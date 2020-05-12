@@ -1,0 +1,22 @@
+package aula20200511.associações;
+
+public class AppPedido {
+
+	public static void main(String[] args) {
+		Produto leite = new Produto("Leite");
+		Produto arroz = new Produto("Arroz");
+
+		ItemPedido primeiroItem = new ItemPedido(leite, 2, 5.50);
+		ItemPedido segundoItem = new ItemPedido(arroz, 1, 8);
+
+		Pedido pedidoPrimeiro = new Pedido(1);
+		pedidoPrimeiro.adicionarItem(primeiroItem);
+		pedidoPrimeiro.adicionarItem(segundoItem);
+
+		for (int i = 0; i < pedidoPrimeiro.getItems().size(); i++) {
+			ItemPedido e = pedidoPrimeiro.getItems().get(i);
+			System.out.println("Item " + (i + 1) + ", produto: " + e.getProduto().getNome() + ", quantidade: "
+					+ e.getQuantidade() + ", valor por unidade:" + e.getPreco());
+		}
+	}
+}
